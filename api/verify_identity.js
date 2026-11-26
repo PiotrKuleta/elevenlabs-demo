@@ -5,10 +5,10 @@ const CUSTOMERS = {
 
 export default function handler(req, res) {
   const { account_number , postcode } = req.body || {};
-  if (!order_id || !postcode) {
+  if (!account_number || !postcode) {
     return res.status(400).json({ error: "account_number and postcode required" });
   }
   const customer = CUSTOMERS[account_number ];
   const verified = customer && customer.postcode === String(postcode);
-  return res.status(200).json({ verified: Boolean(verified), order_id });
+  return res.status(200).json({ verified: Boolean(verified), account_number });
 }
