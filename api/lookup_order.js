@@ -1,6 +1,7 @@
 const ORDERS = {
   "12345": {
     order_id: "12345",
+    account_number: "10000001",
     status: "shipped",
     items: [{ name: "Nova Headphones X1", qty: 1, price: 149.00 }],
     expected_delivery_date: "2026-05-22",
@@ -9,6 +10,7 @@ const ORDERS = {
   },
   "67890": {
     order_id: "67890",
+    account_number: "10000002",
     status: "processing",
     items: [{ name: "Nova Smart Speaker Mini", qty: 2, price: 79.00 }],
     expected_delivery_date: "2026-05-25",
