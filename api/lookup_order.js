@@ -16,6 +16,15 @@ const ORDERS = {
     expected_delivery_date: "2026-05-25",
     shipping_address: "1600 Pennsylvania Ave NW, Washington DC",
     fulfillment_center: "FC-EAST-01"
+  },
+    "67891": {
+    order_id: "67891",
+    account_number: "10000002",
+    status: "shipped",
+    items: [{ name: "Nova Headphones X1", qty: 1, price: 149.00 }],
+    expected_delivery_date: "2026-05-25",
+    shipping_address: "1600 Pennsylvania Ave NW, Washington DC",
+    fulfillment_center: "FC-EAST-01"
   }
 };
 
