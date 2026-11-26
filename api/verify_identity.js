@@ -1,14 +1,14 @@
 const CUSTOMERS = {
-  "12345": { zip: "62701", email: "homer@example.com" },
-  "67890": { zip: "20500", email: "president@example.com" }
+  "10000001": { postcode: "94107", email: "homer@example.com" },
+  "10000002": { postcode: "10001", email: "president@example.com" }
 };
 
 export default function handler(req, res) {
-  const { order_id, zip_code } = req.body || {};
-  if (!order_id || !zip_code) {
-    return res.status(400).json({ error: "order_id and zip_code required" });
+  const { account_number , postcode } = req.body || {};
+  if (!order_id || !postcode) {
+    return res.status(400).json({ error: "account_number and postcode required" });
   }
-  const customer = CUSTOMERS[order_id];
-  const verified = customer && customer.zip === String(zip_code);
+  const customer = CUSTOMERS[account_number ];
+  const verified = customer && customer.postcode === String(postcode);
   return res.status(200).json({ verified: Boolean(verified), order_id });
 }
